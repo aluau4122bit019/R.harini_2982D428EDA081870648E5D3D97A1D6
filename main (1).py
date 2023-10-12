@@ -1,42 +1,11 @@
-<!DOPCTYPE html>
-<html>
-<head>
-<title>
-navigation example
-</title>
-</head>
-<body>
-<h1>
-WELCOME TO MY WEBSITE
-</h1>
-<?php
-if(isset($_GET['page']))
-{
-$page=$_GET['page'];
-if($page==='home')
-{
-include('home.php');
-}
-elseif($page==='about')
-{
-include('about.php');
-}
-elseif($page==='contact')
-{
+def isLeapYear(year)  if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    return True
+  else:
+    return False
 
-include('contact.php');
-}
-}
-?>
-<hr>
-<h3>
-NAVIGATION
-</h3>
-<ul>
-<li><a href="index.php?page=home">HOME</a></li>
-<li><a href="index1.php?page=about">ABOUT</a></li>
-<l><a href="index2.php?page=contact">CONTACT</a></li>
-</ul>
-</body>
-</html>
+year = int(input("Enter a year : "))
 
+if isLeapYear(year):
+  print('{} is a leapyear.'.format(year))
+else:
+  print('{} is not a leapyear.'.format(year))
